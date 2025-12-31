@@ -1,0 +1,9 @@
+/* Kendi özel stillerimiz buraya */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+.carousel-item img {
+    height: 400px; /* Slider yüksekliği */
+    object-fit: cover;
+}
