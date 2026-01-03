@@ -82,21 +82,15 @@ footer i:hover {
 /* --- MOBİL UYUMLULUK (Telefonlar İçin Özel Ayar) --- */
 @media (max-width: 768px) {
     
-    /* WhatsApp Butonu (Mobilde) */
-    .whatsapp-btn {
-        width: 50px;       
-        height: 50px;
-        font-size: 28px;
-        bottom: 40px;      /* Mobilde biraz daha yukarı aldım */
-        right: 15px;       
-    }
-
-    /* Yukarı Çık Butonu (Mobilde) */
+    /* Mobilde Yüzen Butonları GİZLE (Footer'dan ulaşsınlar) */
+    .whatsapp-btn, 
     #scrollTopBtn {
-        width: 40px;       
-        height: 40px;
-        font-size: 20px;
-        bottom: 100px;     /* WhatsApp'ın üstünde */
-        right: 20px;       
+        display: none !important;
+    }
+    
+    /* Mobilde Footer ikonlarını biraz büyütelim ki parmakla basması kolay olsun */
+    footer i {
+        font-size: 24px; 
+        margin: 0 5px;
     }
 }
