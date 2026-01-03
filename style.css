@@ -1,31 +1,29 @@
-/* --- GENEL SAYFA AYARLARI --- */
+/* --- GENEL AYARLAR --- */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f8f9fa;
-    margin: 0;
-    padding: 0;
 }
 
-/* Slider Resimlerini Karartma */
+/* Slider Resim Ayarı */
 .carousel-item img {
-    height: 400px;
+    height: 400px; /* Slider yüksekliği */
     object-fit: cover;
-    filter: brightness(60%);
+    filter: brightness(60%); /* Resimleri karartma efekti */
 }
 
-/* Footer Sosyal Medya İkon Efekti */
+/* Footer Linkleri Efekti */
 footer i:hover {
-    color: #0d6efd;
+    color: #0d6efd; /* Mavi renk efekti */
     transition: 0.3s;
 }
 
-/* --- WHATSAPP BUTONU (YÜZEN) --- */
+/* --- WHATSAPP BUTONU (Masaüstü) --- */
 .whatsapp-btn {
-    position: fixed !important;
+    position: fixed !important; /* !important ile zorla sabitliyoruz */
     bottom: 20px;
     right: 20px;
     background-color: #25d366;
-    color: white !important;
+    color: white !important; /* Link renginin mavi olmasını engeller */
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -35,7 +33,7 @@ footer i:hover {
     font-size: 35px;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
     z-index: 9999;
-    text-decoration: none !important;
+    text-decoration: none !important; /* Alt çizgiyi zorla kaldırır */
     transition: 0.3s;
 }
 
@@ -44,14 +42,14 @@ footer i:hover {
     color: white !important;
 }
 
-/* --- YUKARI ÇIK BUTONU (YÜZEN) --- */
+/* --- YUKARI ÇIK BUTONU (Masaüstü) --- */
 #scrollTopBtn {
-    position: fixed !important;
-    bottom: 90px;
+    position: fixed !important; /* !important ile zorla sabitliyoruz */
+    bottom: 90px; /* WhatsApp'ın üstünde */
     right: 25px;
     width: 50px;
     height: 50px;
-    background-color: #333;
+    background-color: #333; /* Koyu gri */
     color: white !important;
     border-radius: 50%;
     display: flex;
@@ -63,37 +61,36 @@ footer i:hover {
     cursor: pointer;
     text-decoration: none !important;
     
-    /* Gizli Başlangıç */
+    /* Gizleme / Gösterme Efekti */
     opacity: 0;
     visibility: hidden;
     transition: all 0.4s ease;
 }
 
-/* JS ile Gösterildiğinde */
+/* JavaScript (.show) sınıfını ekleyince buton görünür olur */
 #scrollTopBtn.show {
     opacity: 1;
     visibility: visible;
 }
 
 #scrollTopBtn:hover {
-    background-color: #0d6efd;
-    transform: translateY(-5px);
+    background-color: #0d6efd; /* Mavi renk */
+    transform: translateY(-5px); /* Zıplama efekti */
     color: white !important;
 }
 
-/* --- MOBİL GİZLEME AYARI (TELEFONLAR İÇİN) --- */
-/* Ekran genişliği 768px'den küçükse (Telefonlar) */
+/* --- MOBİL UYUMLULUK (Telefonlar İçin Özel Ayar) --- */
 @media (max-width: 768px) {
     
-    /* Yüzen butonları tamamen GİZLE */
+    /* Mobilde Yüzen Butonları GİZLE (Footer'dan ulaşsınlar) */
     .whatsapp-btn, 
     #scrollTopBtn {
         display: none !important;
     }
-
-    /* Footer'daki ikonları biraz büyüt */
+    
+    /* Mobilde Footer ikonlarını biraz büyütelim ki parmakla basması kolay olsun */
     footer i {
-        font-size: 24px;
+        font-size: 24px; 
         margin: 0 5px;
     }
 }
