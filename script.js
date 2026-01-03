@@ -1,15 +1,15 @@
-// Sayfa Yüklendiğinde Çalışan Fonksiyon (Madde 1.e.i)
+// Sayfa Yüklendiğinde Çalışan Fonksiyon
 document.addEventListener("DOMContentLoaded", function() {
     console.log("Web Sayfası Hazır!");
     
-    // Basit bir dinamik işlem: Tarihi Footer'a veya konsola yazma
+    // Konsola bugünün tarihini yazar (Kontrol amaçlı)
     var tarih = new Date().toLocaleDateString('tr-TR');
     console.log("Bugünün Tarihi: " + tarih);
 });
 
-// FORM KONTROL FONKSİYONU (Madde d.iii ve d.iv)
+// --- İLETİŞİM FORMU KONTROLÜ ---
 function formKontrol(event) {
-    // Sayfanın yenilenmesini engelle (Form submit olmasın diye)
+    // Sayfanın yenilenmesini engelle
     event.preventDefault();
 
     // 1. Değerleri Alalım
@@ -39,33 +39,7 @@ function formKontrol(event) {
     return true;
 }
 
-// Sayfa Yüklendiğinde Çalışan Fonksiyon
-document.addEventListener("DOMContentLoaded", function() {
-    console.log("Sayfa Hazır!");
-});
-
-// FORM KONTROL (Eski kodun, dursun)
-function formKontrol(event) {
-    event.preventDefault();
-    var ad = document.getElementById("adSoyad").value;
-    var email = document.getElementById("email").value;
-    var mesaj = document.getElementById("mesaj").value;
-    var kvkk = document.getElementById("kvkkOnay").checked;
-
-    if (ad === "" || email === "" || mesaj === "") {
-        alert("Lütfen tüm alanları doldurunuz!");
-        return false;
-    }
-    if (!kvkk) {
-        alert("Lütfen KVKK metnini onaylayınız!");
-        return false;
-    }
-    alert("Teşekkürler Sayın " + ad + "!\nMesajınız başarıyla gönderildi.");
-    document.getElementById("iletisimFormu").reset();
-    return true;
-}
-
-/* --- YENİ EKLENEN: SCROLL (KAYDIRMA) MANTIĞI --- */
+// --- YUKARI ÇIK (SCROLL) MANTIĞI ---
 
 // Sayfa kaydırıldığında çalışacak olay
 window.onscroll = function() {

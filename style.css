@@ -1,90 +1,102 @@
-/* Kendi özel stillerimiz buraya */
+/* --- GENEL AYARLAR --- */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f8f9fa;
 }
+
+/* Slider Resim Ayarı */
 .carousel-item img {
     height: 400px; /* Slider yüksekliği */
     object-fit: cover;
-}/* --- MEVCUT WHATSAPP KODU BURADA KALSIN --- */
-        .whatsapp-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25d366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 35px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-            z-index: 9999;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-        .whatsapp-btn:hover {
-            transform: scale(1.1);
-            color: white;
-        }
+    filter: brightness(60%);
+}
 
-        /* --- YENİ EKLENECEK: YUKARI ÇIK BUTONU --- */
-        #scrollTopBtn {
-            position: fixed;
-            bottom: 90px; /* WhatsApp'ın (20px + 60px + 10px boşluk) üstünde */
-            right: 25px;  /* WhatsApp ile hizalı olsun diye */
-            width: 50px;  /* Biraz daha küçük kibar olsun */
-            height: 50px;
-            background-color: #333; /* Koyu gri/siyah tema */
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-            z-index: 9998; /* WhatsApp'ın bir tık altında katman */
-            cursor: pointer;
-            text-decoration: none;
-            
-            /* Animasyon Ayarları */
-            opacity: 0;           /* Başlangıçta görünmez */
-            visibility: hidden;   /* Tıklanamaz */
-            transition: all 0.4s ease; /* Yumuşak geçiş */
-        }
+/* Footer Linkleri Efekti */
+footer i:hover {
+    color: #0d6efd; /* Mavi renk efekti */
+    transition: 0.3s;
+}
 
-        /* JavaScript bu sınıfı ekleyince buton görünecek */
-        #scrollTopBtn.show {
-            opacity: 1;
-            visibility: visible;
-        }
+/* --- WHATSAPP BUTONU (Masaüstü) --- */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    z-index: 9999;
+    text-decoration: none;
+    transition: 0.3s;
+}
 
-        #scrollTopBtn:hover {
-            background-color: #0d6efd; /* Üzerine gelince mavi olsun */
-            transform: translateY(-5px); /* Hafif yukarı zıplasın */
-            color: white;
-        }
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    color: white;
+}
 
-/* --- MOBİL İÇİN ÖZEL AYARLAR (YENİ EKLENDİ) --- */
-        @media (max-width: 768px) {
-            
-            /* WhatsApp Butonu Mobilde */
-            .whatsapp-btn {
-                width: 50px;       /* Biraz küçültelim */
-                height: 50px;
-                font-size: 28px;
-                bottom: 80px;      /* Mobilde daha yukarıda olsun (Safari çubuğu için) */
-                right: 15px;       /* Kenara biraz daha yaklaşsın */
-            }
+/* --- YUKARI ÇIK BUTONU (Masaüstü) --- */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 90px; /* WhatsApp'ın üstünde */
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: #333; /* Koyu gri */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    z-index: 9998;
+    cursor: pointer;
+    text-decoration: none;
+    
+    /* Gizleme / Gösterme Efekti */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
 
-            /* Yukarı Çık Butonu Mobilde */
-            #scrollTopBtn {
-                width: 40px;       /* Biraz küçültelim */
-                height: 40px;
-                font-size: 20px;
-                bottom: 140px;     /* WhatsApp'ın (80px + 50px + 10px) tam üstüne gelsin */
-                right: 20px;       /* Hizalı olsun */
-            }
-        }
+/* JavaScript (.show) sınıfını ekleyince buton görünür olur */
+#scrollTopBtn.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#scrollTopBtn:hover {
+    background-color: #0d6efd; /* Mavi renk */
+    transform: translateY(-5px); /* Zıplama efekti */
+    color: white;
+}
+
+/* --- MOBİL UYUMLULUK (Telefonlar İçin Özel Ayar) --- */
+@media (max-width: 768px) {
+    
+    /* WhatsApp Butonu (Mobilde daha küçük ve yukarıda) */
+    .whatsapp-btn {
+        width: 50px;       
+        height: 50px;
+        font-size: 28px;
+        bottom: 80px;      /* Safari alt çubuğu için mesafe */
+        right: 15px;       
+    }
+
+    /* Yukarı Çık Butonu (Mobilde WhatsApp'ın üstüne hizalı) */
+    #scrollTopBtn {
+        width: 40px;       
+        height: 40px;
+        font-size: 20px;
+        bottom: 140px;     
+        right: 20px;       
+    }
+}
