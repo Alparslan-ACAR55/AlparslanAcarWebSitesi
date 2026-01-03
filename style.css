@@ -66,6 +66,7 @@ body {
             transform: translateY(-5px); /* Hafif yukarı zıplasın */
             color: white;
         }
+
 /* --- MOBİL İÇİN ÖZEL AYARLAR (YENİ EKLENDİ) --- */
         @media (max-width: 768px) {
             
