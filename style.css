@@ -66,3 +66,24 @@ body {
             transform: translateY(-5px); /* Hafif yukarı zıplasın */
             color: white;
         }
+/* --- MOBİL İÇİN ÖZEL AYARLAR (YENİ EKLENDİ) --- */
+        @media (max-width: 768px) {
+            
+            /* WhatsApp Butonu Mobilde */
+            .whatsapp-btn {
+                width: 50px;       /* Biraz küçültelim */
+                height: 50px;
+                font-size: 28px;
+                bottom: 80px;      /* Mobilde daha yukarıda olsun (Safari çubuğu için) */
+                right: 15px;       /* Kenara biraz daha yaklaşsın */
+            }
+
+            /* Yukarı Çık Butonu Mobilde */
+            #scrollTopBtn {
+                width: 40px;       /* Biraz küçültelim */
+                height: 40px;
+                font-size: 20px;
+                bottom: 140px;     /* WhatsApp'ın (80px + 50px + 10px) tam üstüne gelsin */
+                right: 20px;       /* Hizalı olsun */
+            }
+        }
