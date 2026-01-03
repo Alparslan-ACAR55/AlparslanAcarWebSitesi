@@ -1,25 +1,25 @@
-/* --- GENEL AYARLAR --- */
+/* --- GENEL SAYFA AYARLARI --- */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
 }
 
-/* Slider Resim Ayarı */
+/* Slider Resimlerini Karartma */
 .carousel-item img {
     height: 400px;
     object-fit: cover;
     filter: brightness(60%);
 }
 
-/* Footer Linkleri Efekti */
+/* Footer Sosyal Medya İkon Efekti */
 footer i:hover {
     color: #0d6efd;
     transition: 0.3s;
 }
 
-/* --- MASAÜSTÜ İÇİN YÜZEN BUTONLAR (Varsayılan) --- */
-
-/* WhatsApp Butonu */
+/* --- WHATSAPP BUTONU (YÜZEN) --- */
 .whatsapp-btn {
     position: fixed !important;
     bottom: 20px;
@@ -44,7 +44,7 @@ footer i:hover {
     color: white !important;
 }
 
-/* Yukarı Çık Butonu */
+/* --- YUKARI ÇIK BUTONU (YÜZEN) --- */
 #scrollTopBtn {
     position: fixed !important;
     bottom: 90px;
@@ -63,12 +63,13 @@ footer i:hover {
     cursor: pointer;
     text-decoration: none !important;
     
-    /* Gizleme / Gösterme Efekti */
+    /* Gizli Başlangıç */
     opacity: 0;
     visibility: hidden;
     transition: all 0.4s ease;
 }
 
+/* JS ile Gösterildiğinde */
 #scrollTopBtn.show {
     opacity: 1;
     visibility: visible;
@@ -80,19 +81,19 @@ footer i:hover {
     color: white !important;
 }
 
-/* --- MOBİL ve TABLET İÇİN GİZLEME AYARI --- */
-/* Ekran genişliği 992px ve altındaysa (Tablet ve Telefonlar) */
-@media (max-width: 992px) {
+/* --- MOBİL GİZLEME AYARI (TELEFONLAR İÇİN) --- */
+/* Ekran genişliği 768px'den küçükse (Telefonlar) */
+@media (max-width: 768px) {
     
-    /* Yüzen butonları tamamen yok et */
+    /* Yüzen butonları tamamen GİZLE */
     .whatsapp-btn, 
     #scrollTopBtn {
         display: none !important;
     }
 
-    /* Footer'daki ikonları biraz büyüt (Rahat tıklansın) */
+    /* Footer'daki ikonları biraz büyüt */
     footer i {
-        font-size: 26px;
-        margin: 0 8px;
+        font-size: 24px;
+        margin: 0 5px;
     }
 }
