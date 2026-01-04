@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var tarih = new Date().toLocaleDateString('tr-TR');
     console.log("Bugünün Tarihi: " + tarih);
 });
++
 
 // --- İLETİŞİM FORMU KONTROLÜ ---
 function formKontrol(event) {
@@ -58,12 +59,3 @@ function scrollFunction() {
 }
 
 // Butona basınca yukarı çıkaran fonksiyon
-function yukariCik(event) {
-    event.preventDefault(); // Linkin varsayılan zıplamasını engelle
-    
-    // Yumuşak kaydırma (Smooth Scroll)
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-}
