@@ -58,4 +58,9 @@ function scrollFunction() {
     }
 }
 
-// Butona basınca yukarı çıkaran fonksiyon
+
+let mesaj = document.getElementById("mesaj");
+if (mesaj) {
+    mesaj.textContent = "";
+}
+alert("Alparslan Acar - Kişisel Web Sayfasına - Hoşgeldiniz");
