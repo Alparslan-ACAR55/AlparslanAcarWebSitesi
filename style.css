@@ -1,0 +1,38 @@
+/* =========================================
+   1. GENEL SAYFA STİLLERİ
+   ========================================= */
+body {
+    /* Okunaklı yazı tipi */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* =========================================
+   2. SLIDER AYARLARI
+   ========================================= */
+.carousel-item img {
+    height: 400px; 
+    object-fit: cover; 
+    filter: brightness(60%); /* Yazı okunsun diye karartma */
+}
+
+/* =========================================
+   3. FOOTER (ALT BİLGİ) AYARLARI
+   ========================================= */
+footer i:hover {
+    color: #0d6efd; /* Mavi renk efekti */
+    transform: scale(1.2); /* Büyüme efekti */
+    transition: 0.3s;
+}
+
+/* =========================================
+   4. MOBİL UYUMLULUK
+   ========================================= */
+@media (max-width: 768px) {
+    
+    /* Telefondaki ikonları biraz büyütelim */
+    footer i {
+        font-size: 24px; 
+        margin: 0 8px;
+    }
+}
